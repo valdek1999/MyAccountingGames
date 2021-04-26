@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyAccounting</string>
+    <string name="list_of_games">List of games</string>
+    <string name="list_of_parties">List of parties</string>
+    <string name="win_statistics">Win statistics</string>
+    <string name="about">About application</string>
+    <string name="logo_text_about">About MyAccounting</string>
+    <string name="text_about">An application for keeping track of board game parties\n \n The application allows the user to keep a record of the games of board games in order to compare the previous results.\n The app allows the user to keep a list of board games. Each board game has the following data:\n * Name,\n * A range of the number of players (for example, from 2 to 5).\n \n The app allows the user to view, add, delete, and edit board games in the list.\n The app allows the user to view, add, delete, and edit batches of board games. Each game must contain the following information :\n * Name of the board game,\n * List of players by name,\n * Each player\'s score,\n * A mark about who is the winner.\n \n The application allows you to search for games by the name of any of the players to be able to view their games in different games.\n The app allows you to view the statistics of wins by players and games played by them. For example, display for the player \"Ivanov\" his percentage of wins for each of the games in which he is listed as a player.\n</string>
+    <string name="title">MyAccounting</string>
+    <string name="accept">Accept</string>
+    <string name="name_of_game">Naming of game</string>
+    <string name="count_of_players">Count of players: </string>
+    <string name="add_new_game">Add new game</string>
+    <string name="add_new_party">Add new party</string>
+    <string name="find_player">Find of player</string>
+</resources>

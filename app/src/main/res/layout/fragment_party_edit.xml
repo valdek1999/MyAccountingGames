@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myaccounting.screens.party_edit.PartyEditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmen_party"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_accept"
+            style="@style/GreenButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Name player #1"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameGameText" />
+
+        <EditText
+            android:id="@+id/editName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Name player #2"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPoints1" />
+
+        <EditText
+            android:id="@+id/editName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Name player #3"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPoints2" />
+
+        <EditText
+            android:id="@+id/editName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name player #4"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editName3"
+            app:layout_constraintTop_toBottomOf="@+id/editName3" />
+
+        <EditText
+            android:id="@+id/editName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name player #5"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editName4"
+            app:layout_constraintTop_toBottomOf="@+id/editPoints4" />
+
+        <EditText
+            android:id="@+id/editPoints1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/editName1"
+            app:layout_constraintTop_toTopOf="@+id/editName1" />
+
+        <EditText
+            android:id="@+id/editPoints2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/editName2"
+            app:layout_constraintTop_toBottomOf="@+id/editName1" />
+
+        <EditText
+            android:id="@+id/editPoints3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/editName3"
+            app:layout_constraintTop_toBottomOf="@+id/editName2" />
+
+        <EditText
+            android:id="@+id/editPoints4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/editName4"
+            app:layout_constraintTop_toBottomOf="@+id/editName3" />
+
+        <EditText
+            android:id="@+id/editPoints5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/editName5"
+            app:layout_constraintTop_toBottomOf="@+id/editName4"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/nameGameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Chess Online"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/who_win"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Who win ?"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/button_accept"
+            app:layout_constraintEnd_toEndOf="@+id/button_accept"
+            app:layout_constraintStart_toStartOf="@+id/button_accept" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

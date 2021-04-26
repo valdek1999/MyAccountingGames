@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.myaccounting.screens.title.TitleFragment"
+        android:label="@string/title"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_titleFragment_to_partiesFragment"
+            app:destination="@id/partiesFragment"
+            app:popUpTo="@id/titleFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_winStatsFragment"
+            app:destination="@id/winStatsFragment"
+            app:popUpTo="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.myaccounting.screens.games.GamesFragment"
+        android:label="@string/list_of_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gamesFragment_to_partyFragment"
+            app:destination="@id/partyFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_gameEditFragment"
+            app:destination="@id/gameEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partiesFragment"
+        android:name="com.example.myaccounting.screens.parties.PartiesFragment"
+        android:label="@string/list_of_parties"
+        tools:layout="@layout/fragment_parties" >
+        <action
+            android:id="@+id/action_partiesFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_partiesFragment_to_partyEditFragment"
+            app:destination="@id/partyEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winStatsFragment"
+        android:name="com.example.myaccounting.screens.winstats.WinStatsFragment"
+        android:label="@string/win_statistics"
+        tools:layout="@layout/fragment_win_stats" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.myaccounting.screens.about.AboutFragment"
+        android:label="@string/title"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.myaccounting.screens.game.GameFragment"
+        android:label="@string/add_new_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyFragment"
+        android:name="com.example.myaccounting.screens.party.PartyFragment"
+        android:label="Adding of party"
+        tools:layout="@layout/fragment_party">
+        <action
+            android:id="@+id/action_partyFragment_to_partiesFragment"
+            app:destination="@id/partiesFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="game_id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <argument
+            android:name="game_name"
+            app:argType="string" />
+        <argument
+            android:name="count_of_players"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEditFragment"
+        android:name="com.example.myaccounting.screens.game_edit.GameEditFragment"
+        android:label="Game editor"
+        tools:layout="@layout/fragment_game_edit" >
+        <argument
+            android:name="id_game"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_gameEditFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyEditFragment"
+        android:name="com.example.myaccounting.screens.party_edit.PartyEditFragment"
+        android:label="fragment_party_edit"
+        tools:layout="@layout/fragment_party_edit" >
+        <argument
+            android:name="id_party"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_partyEditFragment_to_partiesFragment"
+            app:destination="@id/partiesFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+        <argument android:name="count_of_players"
+            app:argType="integer" />
+        <argument android:name="game_name"
+            app:argType="string" />
+        <argument
+            android:name="game_id"
+            app:argType="long" />
+        <argument
+            android:name="players"
+            app:argType="string" />
+        <argument
+            android:name="scores"
+            app:argType="string" />
+    </fragment>
+</navigation>
